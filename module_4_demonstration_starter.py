@@ -34,15 +34,15 @@ try:
 
 except FileNotFoundError as e:
       # print("Error opening File" , e)
-      logging.error(e)
+      logging.critical(e)
 except Exception as e:
       # print("General Excepetion: " , e)
-      logging.error(e)
+      logging.critical(e)
 finally:
       if file is not None:
             file.close()
             # print("File Closed")
-            logging.error(e)
+            logging.info("File Closed")
 
 
 
@@ -51,25 +51,26 @@ finally:
 try:
       if len(data) == 0:
             raise Exception("No data exist.")
-      for record in data:
-            items = record.split(',')
-            title = items[0]
-            name = items[1]
-            salary = float(items[2])
+      else:
+            for record in data:
+                  items = record.split(',')
+                  title = items[0]
+                  name = items[1]
+                  salary = float(items[2])
       
-            #LECTURE SECTION 3
-            #REQUIREMENT:  NOTE RECORDS THAT EXCEED OR WILL EXCEED HIGH_SALARY AMOUNT
-            if salary > HIGH_SALARY:
-                  logging.warning(f"{name}'s salary {salary}"
-                  + f"is currency above"
-                  + f"the recommended maximum of"
-                  + f"{HIGH_SALARY}")
+#LECTURE SECTION 3
+#REQUIREMENT:  NOTE RECORDS THAT EXCEED OR WILL EXCEED HIGH_SALARY AMOUNT
+                  if salary > HIGH_SALARY:
+                        logging.warning(f"{name}'s salary {salary}"
+                        + f"is currency above"
+                        + f"the recommended maximum of"
+                        + f"{HIGH_SALARY}")
 
-            salary *= (1 - RECOMMENDED_INCREASE)
-            new_data.append([title,name,salary])
+                        salary *= (1 + RECOMMENDED_INCREASE)
+                        new_data.append([title,name,salary])
 except Exception as e:
       #print(e)
-      logging.error(e)
+      logging.critical(e)
 
 
 #LECTURE SECTION 4
@@ -86,7 +87,8 @@ try:
             file.write(row)
 except Exception as e:
       # print(e)
-      logging.error(e)
+      logging.critical(e)
+
 #LECTURE SECTION 5
 logging.debug('Debug level logging')
 logging.info('Info level logging')

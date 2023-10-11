@@ -1,1 +1,9 @@
-2023-10-10 13:15:54,226 - ERROR - division by zero
+2023-10-11 10:00:55,731 - CRITICAL - division by zero
+2023-10-11 10:00:55,731 - INFO - File Closed
+2023-10-11 10:00:55,731 - WARNING - Jo-Anne Sinclair's salary 140000.0is currency abovethe recommended maximum of120000
+2023-10-11 10:00:55,731 - WARNING - Jackson Smith's salary 130000.0is currency abovethe recommended maximum of120000
+2023-10-11 10:00:55,731 - DEBUG - Debug level logging
+2023-10-11 10:00:55,731 - INFO - Info level logging
+2023-10-11 10:00:55,731 - WARNING - Warning level logging
+2023-10-11 10:00:55,731 - ERROR - Error level logging
+2023-10-11 10:00:55,731 - CRITICAL - Critical level logging
