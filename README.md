@@ -9,3 +9,4 @@ Student Name
 ## Updates
 1. LC- Incorporated exception handling throughout program
 2. LC- Incorporated logging for high salary employees 
+3. LC - Corrected the calculation error when updating the salary
